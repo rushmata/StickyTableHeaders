@@ -183,19 +183,37 @@
 			}
 		}, 0);
 
-		base.setPositionValues = base.debounce(function () {
-			var winScrollTop = base.$window.scrollTop(),
-				winScrollLeft = base.$window.scrollLeft();
-			if (!base.isSticky ||
-					winScrollTop < 0 || winScrollTop + base.$window.height() > base.$document.height() ||
-					winScrollLeft < 0 || winScrollLeft + base.$window.width() > base.$document.width()) {
-				return;
-			}
-			base.$originalHeader.css({
-				'top': base.topOffset - (base.isWindowScrolling ? 0 : winScrollTop),
-				'left': base.leftOffset - (base.isWindowScrolling ? 0 : winScrollLeft)
-			});
-		}, 0);
+		 base.setPositionValues = function () {
+
+	      var winScrollTop = base.$window.scrollTop(), winScrollLeft = base.$window.scrollLeft();
+
+	      if (!base.isSticky || winScrollTop < 0 || 
+	      	winScrollTop + base.$window.height() > base.$document.height() || 
+	      	winScrollLeft < 0 || 
+	      	winScrollLeft + base.$window.width() > base.$document.width()) {
+	        return;
+	      }
+
+	      var menu_element = $(".Breadcrumb__header");
+	      var navbar_element = $(".Navbar");
+	      var height_navbar;
+
+	      if( menu_element.length > 0 ){
+	          if(navbar_element.length > 0){
+	              height_navbar = (navbar_element.outerHeight() * -1) - menu_element.outerHeight();
+	          } else {
+	              height_navbar = (menu_element.outerHeight() * -1);
+	          }
+	      } else {
+	          height_navbar = (navbar_element.outerHeight() * -1);
+	      }
+
+	      base.$originalHeader.css({
+	        "top": base.topOffset - (base.isWindowScrolling ? (height_navbar + 3) : winScrollTop),
+	        "left": base.leftOffset - (base.isWindowScrolling ? 0 : winScrollLeft)
+	      });
+	    };
+
 
 		base.updateWidth = base.debounce(function () {
 			if (!base.isSticky) {
