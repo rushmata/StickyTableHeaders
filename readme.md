@@ -13,13 +13,13 @@ Installation
 The best way to install is using [npm](https://www.npmjs.com/);
 
 ```bash
-npm install sticky-table-headers
+npm install sq-sticky-table-headers
 ```
 
 or [Bower](http://bower.io/):
 
 ```bash
-bower install StickyTableHeaders
+bower install sq-stickyTableHeaders
 ```
 
 Usage
