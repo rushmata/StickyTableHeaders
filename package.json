@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/seburdin/StickyTableHeaders.git"
   },
-  "author": "Fernando Mata Pelaez <https://github.com/rushmata>",
+  "author": "Swissquote <https://github.com/seburdin>",
   "version": "0.1.19",
   "main": "js/jquery.stickytableheaders.js",
   "license": "MIT",
