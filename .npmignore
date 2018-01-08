@@ -3,3 +3,8 @@ bower.json
 demo
 Gruntfile.js
 StickyTableHeaders.jquery.json
+node_modules  
+src  
+test
+Gruntfile.coffee  
+npm-debug.log 

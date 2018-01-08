@@ -22,8 +22,6 @@ or [Bower](http://bower.io/):
 bower install StickyTableHeaders
 ```
 
-Alternatively, you can download the latest version from [jquery.stickytableheaders.min.js](https://raw.github.com/jmosbech/StickyTableHeaders/master/js/jquery.stickytableheaders.min.js).
-
 Usage
 -----
 Initializing the plugin is pretty straight forward:
