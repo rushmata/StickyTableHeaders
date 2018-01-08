@@ -12,7 +12,7 @@
     "url": "git+https://github.com/seburdin/StickyTableHeaders.git"
   },
   "author": "Swissquote <https://github.com/seburdin>",
-  "version": "0.1.19",
+  "version": "0.2.0",
   "main": "js/jquery.stickytableheaders.js",
   "license": "MIT",
   "devDependencies": {
